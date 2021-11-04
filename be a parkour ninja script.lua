@@ -1,8 +1,8 @@
-game:GetService("StarterGui"):SetCore("SendNotification", {Title = "aniltosun29", Text = "w = hileyi aktif et : p = hileyi aktif etme."})
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "aniltosun29", Text = "w = hileyi aktif et : p = hileyi kapat."})
 local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
 
--- Settings
+-- ayarlar
 
 bind = ""
 bind2 = "w"
@@ -541,7 +541,7 @@ Fly.BorderSizePixel = 0
 Fly.Position = UDim2.new(0, 175, 0, 90)
 Fly.Size = UDim2.new(0, 155, 0, 25)
 Fly.Font = Enum.Font.Fantasy
-Fly.Text = "Fly [L]"
+Fly.Text = "uçma [L]"
 Fly.TextColor3 = Color3.new(1, 1, 1)
 Fly.TextSize = 18
 Fly.TextStrokeTransparency = 0
@@ -565,7 +565,7 @@ GunDropGrabber.BorderSizePixel = 0
 GunDropGrabber.Position = UDim2.new(0, 10, 0, 90)
 GunDropGrabber.Size = UDim2.new(0, 155, 0, 25)
 GunDropGrabber.Font = Enum.Font.Fantasy
-GunDropGrabber.Text = "Gun Grabber"
+GunDropGrabber.Text = "silah toplayıcı"
 GunDropGrabber.TextColor3 = Color3.new(1, 1, 1)
 GunDropGrabber.TextSize = 18
 GunDropGrabber.TextStrokeTransparency = 0
@@ -589,7 +589,7 @@ KillAll.BorderSizePixel = 0
 KillAll.Position = UDim2.new(0, 175, 0, 130)
 KillAll.Size = UDim2.new(0, 155, 0, 25)
 KillAll.Font = Enum.Font.Fantasy
-KillAll.Text = "Kill All"
+KillAll.Text = "Herkezi öldür"
 KillAll.TextColor3 = Color3.new(1, 1, 1)
 KillAll.TextSize = 18
 KillAll.TextStrokeTransparency = 0
@@ -613,7 +613,7 @@ MurdererESP.BorderSizePixel = 0
 MurdererESP.Position = UDim2.new(0, 10, 0, 10)
 MurdererESP.Size = UDim2.new(0, 155, 0, 25)
 MurdererESP.Font = Enum.Font.Fantasy
-MurdererESP.Text = "Murderer ESP"
+MurdererESP.Text = "Katil Esp"
 MurdererESP.TextColor3 = Color3.new(1, 1, 1)
 MurdererESP.TextSize = 18
 MurdererESP.TextStrokeTransparency = 0
