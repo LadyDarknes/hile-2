@@ -256,20 +256,3 @@ parkour:AddButton({
 });
 
 library:Init();
-
-InfiniteJumpEnabled = true
-game:GetService("UserInputService").JumpRequest:connect(function()
-	if InfiniteJumpEnabled then
-		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
-	end
-end)
-
-local plr = game:GetService"Players".LocalPlayer
-local m = plr:GetMouse()
-m.KeyDown:connect(function(k)
-if k == "c" then
-game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
-wait()
-game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Seated")
-end
-end)
