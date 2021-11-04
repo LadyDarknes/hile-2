@@ -1,7 +1,6 @@
 --[[
-    Parkour
-    Sowd likes schemas, please bully him. Proof: https://i.imgur.com/GzrgHnZ.png
-    LegoHacks is winning :flushed:
+İyi eğlenceler
+not anıl
 ]]
 
 local getupvalue = (getupvalue or debug.getupvalue);
