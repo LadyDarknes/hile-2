@@ -28,12 +28,12 @@ local function checkassetversion()
 end
 
 if not (getasset and requestfunc and queueteleport) then
-	print("Vape not supported with your exploit.")
+	print("hile exploitinizi desteklemiyor!")
 	return
 end
 
 if shared.VapeExecuted then
-	error("Vape Already Injected")
+	error("hile inject edildi")
 	return
 else
 	shared.VapeExecuted = true
@@ -80,7 +80,7 @@ checkpublicrepo = function(id)
 		spawn(function()
 			local textlabel = Instance.new("TextLabel")
 			textlabel.Size = UDim2.new(1, 0, 0, 36)
-			textlabel.Text = "Loading CustomModule Failed!, Attempts : "..checkpublicreponum
+			textlabel.Text = "CostumeModülü yükelenemedi!, denemeler : "..checkpublicreponum
 			textlabel.BackgroundTransparency = 1
 			textlabel.TextStrokeTransparency = 0
 			textlabel.TextSize = 30
@@ -105,7 +105,7 @@ local function getcustomassetfunc(path)
 		spawn(function()
 			local textlabel = Instance.new("TextLabel")
 			textlabel.Size = UDim2.new(1, 0, 0, 36)
-			textlabel.Text = "Downloading "..path
+			textlabel.Text = "İndiriliyor"..path
 			textlabel.BackgroundTransparency = 1
 			textlabel.TextStrokeTransparency = 0
 			textlabel.TextSize = 30
@@ -167,7 +167,7 @@ local Profiles = GuiLibrary.CreateWindow2({
 })
 GUI.CreateDivider()
 GUI.CreateButton({
-	["Name"] = "Combat", 
+	["Name"] = "Savaş", 
 	["Function"] = function(callback) Combat.SetVisible(callback) end, 
 	["Icon"] = "vape/assets/CombatIcon.png", 
 	["IconSize"] = 15
@@ -179,36 +179,36 @@ GUI.CreateButton({
 	["IconSize"] = 16
 })
 GUI.CreateButton({
-	["Name"] = "Render", 
+	["Name"] = "Esp veya(minecraft render hileleri)", 
 	["Function"] = function(callback) Render.SetVisible(callback) end, 
 	["Icon"] = "vape/assets/RenderIcon.png", 
 	["IconSize"] = 17
 })
 GUI.CreateButton({
-	["Name"] = "Utility", 
+	["Name"] = "Faydalı", 
 	["Function"] = function(callback) Utility.SetVisible(callback) end, 
 	["Icon"] = "vape/assets/UtilityIcon.png", 
 	["IconSize"] = 17
 })
 GUI.CreateButton({
-	["Name"] = "World", 
+	["Name"] = "Dünya", 
 	["Function"] = function(callback) World.SetVisible(callback) end, 
 	["Icon"] = "vape/assets/WorldIcon.png", 
 	["IconSize"] = 16
 })
-GUI.CreateDivider("MISC")
+GUI.CreateDivider("Çeşitli")
 GUI.CreateButton({
-	["Name"] = "Friends", 
+	["Name"] = "Arkadaşlar", 
 	["Function"] = function(callback) Friends.SetVisible(callback) end, 
 })
 GUI.CreateButton({
-	["Name"] = "Profiles", 
+	["Name"] = "Profiller", 
 	["Function"] = function(callback) Profiles.SetVisible(callback) end, 
 })
 local FriendsTextList = {["RefreshValues"] = function() end}
 local FriendsColor = {["Value"] = 0.44}
 FriendsTextList = Friends.CreateTextList({
-	["Name"] = "FriendsList", 
+	["Name"] = "Arkadaş Listesi", 
 	["TempText"] = "Username / Alias", 
 	["CustomFunction"] = function(obj)
 		obj.ItemText.TextColor3 = Color3.new(1, 1, 1)
@@ -227,26 +227,26 @@ FriendsTextList = Friends.CreateTextList({
 	end
 })
 Friends.CreateToggle({
-	["Name"] = "Use Friends",
+	["Name"] = "arkadaş kullan",
 	["Function"] = function(callback) end,
 	["Default"] = true
 })
 Friends.CreateToggle({
-	["Name"] = "Use Alias",
+	["Name"] = "takma ad kullan",
 	["Function"] = function(callback) end,
 	["Default"] = true,
 })
 Friends.CreateToggle({
-	["Name"] = "Spoof alias",
+	["Name"] = "Sahte Takma ad",
 	["Function"] = function(callback) end,
 })
 Friends.CreateToggle({
-	["Name"] = "Recolor visuals",
+	["Name"] = "Görselleri yeniden renklendir",
 	["Function"] = function(callback) end,
 	["Default"] = true
 })
 FriendsColor = Friends.CreateColorSlider({
-	["Name"] = "Friends Color", 
+	["Name"] = "Arkadaş rengi", 
 	["Function"] = function(val) 
 		pcall(function()
 			FriendsTextList["Object"].AddBoxBKG.AddButton.ImageColor3 = Color3.fromHSV(val, 1, 1)
@@ -263,7 +263,7 @@ FriendsColor = Friends.CreateColorSlider({
 local ProfilesTextList = {["RefreshValues"] = function() end}
 local profilesloaded = false
 ProfilesTextList = Profiles.CreateTextList({
-	["Name"] = "ProfilesList",
+	["Name"] = "Profile list",
 	["TempText"] = "Type name", 
 	["AddFunction"] = function(user)
 		GuiLibrary["Profiles"][user] = {["Keybind"] = "", ["Selected"] = false}
@@ -311,7 +311,7 @@ ProfilesTextList = Profiles.CreateTextList({
 		bindtext.TextColor3 = Color3.fromRGB(85, 85, 85)
 		bindtext.Visible = (GuiLibrary["Profiles"][profilename]["Keybind"] ~= "")
 		local bindtext2 = Instance.new("TextLabel")
-		bindtext2.Text = "PRESS A KEY TO BIND"
+		bindtext2.Text = "Ayarlamak için bir tuşa basın..."
 		bindtext2.Size = UDim2.new(0, 150, 0, 33)
 		bindtext2.Font = Enum.Font.SourceSans
 		bindtext2.TextSize = 17
@@ -462,13 +462,13 @@ OnlineProfilesFrameText.Position = UDim2.new(0, 36, 0, 0)
 OnlineProfilesFrameText.TextXAlignment = Enum.TextXAlignment.Left
 OnlineProfilesFrameText.Font = Enum.Font.SourceSans
 OnlineProfilesFrameText.TextSize = 17
-OnlineProfilesFrameText.Text = "Profiles"
+OnlineProfilesFrameText.Text = "Profiller"
 OnlineProfilesFrameText.TextColor3 = Color3.fromRGB(201, 201, 201)
 OnlineProfilesFrameText.Parent = OnlineProfilesFrame
 local OnlineProfilesFrameText2 = Instance.new("TextLabel")
 OnlineProfilesFrameText2.TextSize = 15
 OnlineProfilesFrameText2.TextColor3 = Color3.fromRGB(85, 84, 85)
-OnlineProfilesFrameText2.Text = "YOUR PROFILES"
+OnlineProfilesFrameText2.Text = "Senin profilin"
 OnlineProfilesFrameText2.Font = Enum.Font.SourceSans
 OnlineProfilesFrameText2.BackgroundTransparency = 1
 OnlineProfilesFrameText2.TextXAlignment = Enum.TextXAlignment.Left
@@ -479,7 +479,7 @@ OnlineProfilesFrameText2.Parent = OnlineProfilesFrame
 local OnlineProfilesFrameText3 = Instance.new("TextLabel")
 OnlineProfilesFrameText3.TextSize = 15
 OnlineProfilesFrameText3.TextColor3 = Color3.fromRGB(85, 84, 85)
-OnlineProfilesFrameText3.Text = "PUBLIC PROFILES"
+OnlineProfilesFrameText3.Text = "Genel Profil"
 OnlineProfilesFrameText3.Font = Enum.Font.SourceSans
 OnlineProfilesFrameText3.BackgroundTransparency = 1
 OnlineProfilesFrameText3.TextXAlignment = Enum.TextXAlignment.Left
@@ -544,7 +544,7 @@ OnlineProfilesButton.MouseButton1Click:connect(function()
 				profiledownload.TextColor3 = Color3.fromRGB(200, 200, 200)
 				profiledownload.TextSize = 15
 				profiledownload.AutoButtonColor = false
-				profiledownload.Text = "DOWNLOAD"
+				profiledownload.Text = "İndir"
 				profiledownload.Position = UDim2.new(0, 14, 0, 96)
 				profiledownload.Visible = false 
 				profiledownload.Parent = profilebox
@@ -797,12 +797,12 @@ TextGui.CreateDropdown({
 	end
 })
 TextGui.CreateToggle({
-	["Name"] = "Shadow", 
+	["Name"] = "Gölgeler", 
 	["Function"] = function(callback) onetext2.Visible = callback onetext4.Visible = callback onething3.Visible = callback end,
-	["HoverText"] = "Renders shadowed text."
+	["HoverText"] = "Gölgeli metin oluşturur."
 })
 local TextGuiUseCategoryColor = TextGui.CreateToggle({
-	["Name"] = "Use Category Color", 
+	["Name"] = "Kategori Rengini Kullan", 
 	["Function"] = function(callback) GuiLibrary["UpdateUI"]() end
 })
 TextGui.CreateToggle({
@@ -848,10 +848,10 @@ TextGui.CreateToggle({
 			end
 		end
 	end,
-	["HoverText"] = "Renders a vape watermark"
+	["HoverText"] = "Bir vape filigranı oluşturur"
 })
 TextGui.CreateToggle({
-	["Name"] = "Render background", 
+	["Name"] = "Arka planı oluştur", 
 	["Function"] = function(callback)
 		onebackground.Visible = callback
 	end
@@ -899,7 +899,7 @@ local function HealthbarColorTransferFunction(healthPercent)
 end
 
 local TargetInfo = GuiLibrary.CreateCustomWindow({
-	["Name"] = "Target Info",
+	["Name"] = "Hedef Bilgisi",
 	["Icon"] = "vape/assets/TargetInfoIcon1.png",
 	["IconSize"] = 16
 })
@@ -929,7 +929,7 @@ targetname.TextStrokeTransparency = 0.75
 targetname.BackgroundTransparency = 1
 targetname.Size = UDim2.new(0, 80, 0, 16)
 targetname.TextScaled = true
-targetname.Text = "Target name"
+targetname.Text = "Hedef adı"
 targetname.ZIndex = 2
 targetname.TextXAlignment = Enum.TextXAlignment.Left
 targetname.TextYAlignment = Enum.TextYAlignment.Top
@@ -1005,7 +1005,7 @@ shared.VapeTargetInfo = {
 	["Object"] = TargetInfo
 }
 GUI.CreateCustomToggle({
-	["Name"] = "Target Info", 
+	["Name"] = "Hedef Bilgisi", 
 	["Icon"] = "vape/assets/TargetInfoIcon2.png", 
 	["Function"] = function(callback) TargetInfo.SetVisible(callback) end,
 	["Priority"] = 1
@@ -1014,14 +1014,14 @@ local GeneralSettings = GUI.CreateDivider2("General Settings")
 local ModuleSettings = GUI.CreateDivider2("Module Settings")
 local GUISettings = GUI.CreateDivider2("GUI Settings")
 ModuleSettings.CreateToggle({
-	["Name"] = "Teams by server", 
+	["Name"] = "Sunucuya göre takımlar", 
 	["Function"] = function() end,
 })
 ModuleSettings.CreateToggle({
-	["Name"] = "Teams by color", 
+	["Name"] = "Renge göre takımlar", 
 	["Function"] = function() end,
 	["Default"] = true,
-	["HoverText"] = "Ignore players with the selected name color"
+	["HoverText"] = "Seçilen ad rengine sahip oyuncuları yoksay"
 })
 local MiddleClickInput
 ModuleSettings.CreateToggle({
@@ -1048,18 +1048,18 @@ ModuleSettings.CreateToggle({
 			end
 		end
 	end,
-	["HoverText"] = "Click middle mouse button to add the player you are hovering over as a friend"
+	["HoverText"] = "Üzerine geldiğiniz oyuncuyu arkadaş olarak eklemek için farenin orta tuşuna tıklayın."
 })
 ModuleSettings.CreateToggle({
 	["Name"] = "Lobby Check",
 	["Function"] = function() end,
 	["Default"] = true,
-	["HoverText"] = "Temporarily disables certain features in server lobbies."
+	["HoverText"] = "Sunucu lobilerindeki belirli özellikleri geçici olarak devre dışı bırakır."
 })
 local blatantmode = GUI.CreateToggle({
 	["Name"] = "Blatant mode",
 	["Function"] = function() end,
-	["HoverText"] = "Required for certain features."
+	["HoverText"] = "Belirli özellikler için gereklidir."
 })
 guicolorslider = GUI.CreateColorSlider("GUI Theme", function(val) GuiLibrary["Settings"]["GUIObject"]["Color"] = val GuiLibrary["UpdateUI"]() end)
 local tabsortorder = {
@@ -1161,13 +1161,13 @@ end
 GeneralSettings.CreateToggle({
 	["Name"] = "Auto-load module states", 
 	["Function"] = function() end,
-	["HoverText"] = "Automatically enable saved module states upon loading profiles.\n(You can save module states by shift-clicking a profile button)"
+	["HoverText"] = "Profilleri yükledikten sonra kayıtlı modül durumlarını otomatik olarak etkinleştirin.\n(Bir profil düğmesini shift tuşuna basarak modül durumlarını kaydedebilirsiniz)"
 })
 GUISettings.CreateToggle({
 	["Name"] = "Blur Background", 
 	["Function"] = function(callback) GuiLibrary["MainBlur"].Size = (callback and 25 or 0) end,
 	["Default"] = true,
-	["HoverText"] = "Blur the background of the GUI"
+	["HoverText"] = "GUI'nin arka planını bulanıklaştırın"
 })
 local rescale = GUISettings.CreateToggle({
 	["Name"] = "Rescale", 
@@ -1191,13 +1191,13 @@ local welcomemsg = GUISettings.CreateToggle({
 	["Name"] = "GUI bind indicator", 
 	["Function"] = function() end, 
 	["Default"] = true,
-	["HoverText"] = 'Displays a message indicating your GUI keybind upon injecting.\nI.E "Press RIGHTSHIFT to open GUI"'
+	["HoverText"] = 'Enjekte edildikten sonra GUI tuş bağlantınızı belirten bir mesaj görüntüler.\nI.E "GUIyi açmak için SAĞ ÜST KRKTye basın"'
 })
 GUISettings.CreateToggle({
 	["Name"] = "Show Tooltips", 
 	["Function"] = function(callback) GuiLibrary["ToggleTooltips"] = callback end,
 	["Default"] = true,
-	["HoverText"] = "Toggles visibility of these"
+	["HoverText"] = "Bunların görünürlüğünü değiştirir"
 })
 GeneralSettings.CreateToggle({
 	["Name"] = "Discord integration", 
@@ -1211,13 +1211,13 @@ Notifications = GeneralSettings.CreateToggle({
 		GuiLibrary["Notifications"] = callback 
 	end,
 	["Default"] = true,
-	["HoverText"] = "Shows notifications"
+	["HoverText"] = "Bildirimleri gösterir"
 })
 ToggleNotifications = GUISettings.CreateToggle({
 	["Name"] = "Toggle Alert", 
 	["Function"] = function(callback) GuiLibrary["ToggleNotifications"] = callback end,
 	["Default"] = true,
-	["HoverText"] = "Notifies you if a module is enabled/disabled."
+	["HoverText"] = "Bir modül olup olmadığını size bildirir aktif/devre dışı."
 })
 ToggleNotifications["Object"].BackgroundTransparency = 0
 ToggleNotifications["Object"].BorderSizePixel = 0
