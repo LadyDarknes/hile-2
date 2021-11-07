@@ -65,7 +65,7 @@ hzon.Text = "hızı aç"
 hzon.TextColor3 = Color3.fromRGB(0, 0, 0)
 hzon.TextSize = 14.000
 hzon.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 35
 end)
 
 hzoff.Name = "hızoff"
@@ -78,7 +78,7 @@ hzoff.Text = "hızı kapa"
 hzoff.TextColor3 = Color3.fromRGB(0, 0, 0)
 hzoff.TextSize = 14.000
 hzoff.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed =  30
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed =  16
 end)
 
 kapa.Name = "kapa"
