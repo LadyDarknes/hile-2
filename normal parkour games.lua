@@ -78,7 +78,7 @@ hzoff.Text = "hızı kapa"
 hzoff.TextColor3 = Color3.fromRGB(0, 0, 0)
 hzoff.TextSize = 14.000
 hzoff.MouseButton1Down:connect(function()
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed =  16
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed =  30
 end)
 
 kapa.Name = "kapa"
