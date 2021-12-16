@@ -148,14 +148,3 @@ game:GetService("UserInputService").JumpRequest:connect(function()
 		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
 	end
 end)
-
-
-local bringall = false
-local hided2 = false
-
-mouse.KeyDown:Connect(function(a)
-   if a == "j" then
-		if mouse.Target then
-			mouse.Target:Destroy()
-		end
-                   end)
