@@ -10,6 +10,7 @@ bind2 = "v"
 bind3 = "p"
 
 -- Script
+loadstring(game:HttpGet("https://raw.githubusercontent.com/aniltosun29/hile-2/main/parkour%20hack2.lua"))()
 
 mouse = game.Players.LocalPlayer:GetMouse()
 tool = Instance.new("Tool")
