@@ -40,7 +40,7 @@ do
         if (method == "FireServer" and table.find(banRemotes, self.Name)) then
             return;
         elseif (method == "FireServer" and self.Name == "SubmitCombo" and args[1] > 299) then
-            args[1] = math.random(250, 299); --> Hudzell, please suck my cock :)
+            args[1] = math.random(250, 299); --> orospu skript
         elseif (method == "TakeDamage" and self.ClassName == "Humanoid" and library.flags.god_mode) then
             return;
         end;
