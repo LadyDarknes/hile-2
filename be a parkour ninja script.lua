@@ -18,6 +18,7 @@ end)
 
 mouse.KeyDown:connect(function(key2)
 if key2 == bind2 then
+_G.AimbotEnabled = true
 _G.HeadSize = 50
 _G.Disabled = true
 
@@ -40,7 +41,8 @@ end)
 
 mouse.KeyDown:connect(function(key3)
 if key3 == bind3 then
-_G.HeadSize = 50
+_G.AimbotEnabled = false
+_G.HeadSize = 25
 _G.Disabled = true
 
 
