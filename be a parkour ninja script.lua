@@ -18,7 +18,7 @@ end)
 
 mouse.KeyDown:connect(function(key2)
 if key2 == bind2 then
-_G.HeadSize = 15
+_G.HeadSize = 50
 _G.Disabled = true
 
 
@@ -40,7 +40,7 @@ end)
 
 mouse.KeyDown:connect(function(key3)
 if key3 == bind3 then
-_G.HeadSize = 30
+_G.HeadSize = 50
 _G.Disabled = true
 
 
