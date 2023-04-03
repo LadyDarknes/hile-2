@@ -1,6 +1,6 @@
 --[[
 İyi eğlenceler
-not anıl
+not layd'iniz
 ]]
 
 local getupvalue = (getupvalue or debug.getupvalue);
