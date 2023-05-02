@@ -1,4 +1,4 @@
-game:GetService("StarterGui"):SetCore("SendNotification", {Title = "made by aniltosun29ss", Text = "v = hileyi aktif et : p = hileyi kapat."})
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "made by NO NİCK NAME FUK U", Text = "v = hileyi aktif et : p = hileyi kapat."})
 game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Hazır ol!"})
 local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
